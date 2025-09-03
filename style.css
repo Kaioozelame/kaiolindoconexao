@@ -1,85 +1,124 @@
-/* Reset básico */
+/* Resetando margens e padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+:root {
+    --cor-primaria: #f00505; 
+    --cor-secundaria: #ffde22;
+    --cor-fundo: #f2f2f2;
+    --cor-texto: #333;
+    --cor-branco: #fff;
+    --cor-destaque: #f00505;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-header {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+/* Barra de navegação */
+nav {
+    background-color: var(--cor-primaria);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 
-header .logo h1 {
-    font-size: 2.5rem;
-    margin: 0;
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+nav h1 {
+    color: var(--cor-branco);
+    font-size: 1.8rem;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
+nav a {
+    color: var(--cor-branco);
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+nav a:hover {
+    color: var(--cor-secundaria);
 }
 
-section h2 {
-    font-size: 2rem;
+/* Seções */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2rem;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Seção Personagens */
+.personagens {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.personagem {
+    display: flex;
+    
+    text-align: justify;
+    max-width: 250px;
+}
+
+.personagem img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.personagem h3 {
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
     margin-bottom: 10px;
 }
 
-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.galeria {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.galeria img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
 footer {
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 20px;
+    margin-top: 40px;
 }
