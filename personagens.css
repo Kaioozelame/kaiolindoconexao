@@ -1,0 +1,16 @@
+body {
+    background-image: url(imagens.png/24b16b6e6f7f1b21eca4bad1ef34cdad.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    line-height: 1.4;
+    color: #000000;
+    padding: 1rem;
+    margin: 0;
+}
